@@ -35,9 +35,9 @@
 	if ($mode == 'javascript') {
 		if (isset($_SERVER['HTTP_REFERER']) and !isset($_GET['rss'])) {
 			// Check if the script was requested by this server
-			if (!preg_match('/' . $domain . '/i', parse_url($_SERVER['HTTP_REFERER'], PHP_URL_HOST))) {
-				exit(jsAddSlashes('<b>HashOver - Error:</b> External use not allowed.', 'single'));
-			}
+			//if (!preg_match('/' . $domain . '/i', parse_url($_SERVER['HTTP_REFERER'], PHP_URL_HOST))) {
+				//exit(jsAddSlashes('<b>HashOver - Error:</b> External use not allowed.', 'single'));
+			//}
 			$page_url = (!isset($canon_url) or empty($canon_url)) ? $_SERVER['HTTP_REFERER'] : $canon_url;
 		} else {
 			if (!isset($_GET['rss'])) {
